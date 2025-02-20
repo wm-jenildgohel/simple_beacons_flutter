@@ -25,7 +25,7 @@ open class BeaconHelper(var context: Context) : BeaconConsumer, BeaconsPlugin.Co
     }
 
     override fun bindService(p0: Intent?, p1: ServiceConnection, p2: Int): Boolean {
-        return context.bindService(p0, p1, p2)
+        return context.bindService(p0!!, p1, p2)
     }
 
     private var eventSink: EventChannel.EventSink? = null
