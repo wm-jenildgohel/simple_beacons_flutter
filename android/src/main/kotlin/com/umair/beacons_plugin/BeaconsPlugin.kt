@@ -54,17 +54,17 @@ class BeaconsPlugin : FlutterPlugin, ActivityAware,
         @JvmStatic
         internal var messenger: BinaryMessenger? = null
 
-        @JvmStatic
-        fun registerWith(registrar: PluginRegistry.Registrar) {
-            BeaconPreferences.init(registrar.context())
-            if (beaconHelper == null) {
-                this.beaconHelper = BeaconHelper(registrar.context())
-            }
-            val instance = BeaconsPlugin()
-            registrar.addRequestPermissionsResultListener(instance)
-            //requestPermission()
-            registrar.activity()?.let { setUpPluginMethods(it, registrar.messenger()) }
-        }
+        // @JvmStatic
+        // fun registerWith(registrar: PluginRegistry.Registrar) {
+        //     BeaconPreferences.init(registrar.context())
+        //     if (beaconHelper == null) {
+        //         this.beaconHelper = BeaconHelper(registrar.context())
+        //     }
+        //     val instance = BeaconsPlugin()
+        //     registrar.addRequestPermissionsResultListener(instance)
+        //     //requestPermission()
+        //     registrar.activity()?.let { setUpPluginMethods(it, registrar.messenger()) }
+        // }
 
         @JvmStatic
         fun registerWith(messenger: BinaryMessenger, context: Context) {
