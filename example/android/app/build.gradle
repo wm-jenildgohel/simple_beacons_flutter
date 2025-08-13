@@ -38,7 +38,7 @@ android {
 
     defaultConfig {
         applicationId "com.umair.beacons_plugin_example"
-        minSdkVersion 18
+        minSdkVersion flutter.minSdkVersion
         targetSdkVersion 31
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
